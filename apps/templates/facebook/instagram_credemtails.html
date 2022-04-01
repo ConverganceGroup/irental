@@ -1,0 +1,70 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}	
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-content" >
+            <div class="row"> 
+                <!-- users visite start -->
+                <div class="col-md-12 col-xl-6" style="margin: auto;">
+                    <div class="card">
+                        <div class="row align-items-center text-center">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <h4 class="mb-3 f-w-400">
+                                        Instagram API Settings
+                                    </h4>
+                                    <!-- dummy spacer -->
+                                    <p> <br /> </p>						
+                                    <form method="post" action="">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="feather icon-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control", placeholder="enter facebook app secrat"/>
+                                        </div>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control", placeholder="enter facebook acess token"/>
+                                        </div>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control", placeholder="enter facebook app id"/>
+                                        </div>
+                                        <button type="submit" name="login" class="btn btn-block btn-primary mb-4">Save</button>
+                                    
+                                    </form>
+        
+                                    <!-- <p class="mb-0 text-muted">Don’t have an account? <a href="{{ url_for('authentication_blueprint.register') }}" class="f-w-400">Signup</a></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <!-- Apex Chart -->
+    <script src="/static/assets/js/plugins/apexcharts.min.js"></script>
+    <!-- custom-chart js -->
+    <script src="/static/assets/js/pages/dashboard-main.js"></script>
+
+{% endblock javascripts %}
